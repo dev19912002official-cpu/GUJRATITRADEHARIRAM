@@ -1,180 +1,62 @@
+
 <!DOCTYPE html>
 <html lang="gu">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Join Gujarati Trader — free stock market education community on Telegram.">
-<title>GUJARATI TRADER | Official Community</title>
+<title>TRADING EXPERT - Gujarati Community</title>
 
-<link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"></noscript>
+<meta property="og:title" content="Stock Market Analysis - Gujarati Trader">
+<meta property="og:description" content="Daily Market Updates & Educational Content in Gujarati">
+<meta property="og:type" content="website">
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Gujarati:wght@400;600;700&family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
 
 <style>
-*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+*{ margin:0; padding:0; box-sizing:border-box; }
+body{ background:#0b0f19; color:#fff; font-family:'Noto Sans Gujarati', 'Poppins', sans-serif; }
 
-body {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 18px 16px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  color: #fff6ec;
-  background: #14060A;
-}
+/* Top Announcement Bar */
+.top-bar{ background:#1e293b; text-align:center; padding:10px; font-size:12px; color:#cbd5e1; border-bottom:1px solid #334155; }
+.top-bar span{ color:#00e676; font-weight:700; }
 
-.wrapper { width: 100%; max-width: 420px; }
+/* Main Container */
+.container{ max-width:440px; margin:0 auto; padding:20px; }
 
-.card {
-  background: #1D0C10;
-  border: 1px solid rgba(255, 140, 40, 0.22);
-  border-radius: 18px;
-  overflow: hidden;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
-}
+/* Profile Section */
+.profile-card{ text-align:center; background:linear-gradient(180deg, #1e293b 0%, #0f172a 100%); padding:25px 15px; border-radius:20px; border:1px solid #334155; margin-bottom:20px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+.img-box{ width:105px; height:105px; margin:0 auto 15px auto; border-radius:50%; border:3px solid #ffb703; overflow:hidden; background:#111; box-shadow:0 0 15px rgba(255, 183, 3, 0.3); }
+.img-box img{ width:100%; height:100%; object-fit:cover; }
 
-/* Kite-motif triangle strip - festive accent, static (not animated) */
-.kite-strip {
-  display: flex;
-  height: 8px;
-}
-.kite-strip span { flex: 1; }
-.kite-strip span:nth-child(1) { background: #FF7A18; }
-.kite-strip span:nth-child(2) { background: #FFC93C; }
-.kite-strip span:nth-child(3) { background: #E63946; }
-.kite-strip span:nth-child(4) { background: #2A9D8F; }
-.kite-strip span:nth-child(5) { background: #FF7A18; }
+/* Typography */
+h1{ font-size:24px; font-weight:700; color:#ffffff; }
+.sub{ color:#fb8500; font-size:14px; font-weight:600; margin-top:4px; }
+.desc{ color:#94a3b8; font-size:13px; margin-top:8px; line-height:1.5; }
 
-.body-pad { padding: 20px 20px 22px; text-align: center; }
+/* Stats Grid */
+.stats{ display:flex; gap:10px; margin:20px 0; }
+.box{ flex:1; background:#1e293b; border:1px solid #334155; padding:12px 8px; border-radius:14px; text-align:center; }
+.box h2{ color:#ffb703; font-size:20px; font-weight:800; }
+.box p{ font-size:11px; color:#cbd5e1; margin-top:2px; }
 
-.avatar {
-  width: 84px;
-  height: 84px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid #FF7A18;
-  background: #351515;
-  margin: 0 auto 12px;
-  display: block;
-}
+/* Main Call to Action Button */
+.btn{ display:flex; align-items:center; justify-content:center; gap:8px; width:100%; margin:20px 0; padding:16px; background:linear-gradient(90deg, #00c853 0%, #00e676 100%); color:#000; text-align:center; text-decoration:none; border-radius:14px; font-weight:700; font-size:16px; border:none; cursor:pointer; box-shadow:0 6px 20px rgba(0, 230, 118, 0.3); transition: transform 0.2s; }
+.btn:active{ transform: scale(0.98); }
 
-.badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  background: rgba(255, 122, 24, 0.1);
-  border: 1px solid rgba(255, 122, 24, 0.3);
-  color: #FFA35C;
-  font-size: 10.5px;
-  font-weight: 700;
-  letter-spacing: 0.4px;
-  text-transform: uppercase;
-  padding: 5px 12px;
-  border-radius: 50px;
-  margin-bottom: 12px;
-}
+/* Features / Benefits */
+.points{ margin-top:20px; }
+.point{ background:#1e293b; border:1px solid #334155; padding:14px; border-radius:12px; margin-bottom:10px; font-size:13px; color:#e2e8f0; display:flex; gap:12px; align-items:center; }
+.icon{ font-size:18px; }
 
-h1 {
-  font-size: 21px;
-  font-weight: 800;
-  color: #ffffff;
-  margin-bottom: 4px;
-}
-.subtitle {
-  font-size: 12.5px;
-  color: #e0b9a0;
-  margin-bottom: 16px;
-}
-
-/* Circular medallion stats instead of boxes/chips */
-.medal-row {
-  display: flex;
-  justify-content: center;
-  gap: 16px;
-  margin-bottom: 18px;
-}
-.medal {
-  text-align: center;
-}
-.medal .circle {
-  width: 54px;
-  height: 54px;
-  border-radius: 50%;
-  background: rgba(255, 122, 24, 0.08);
-  border: 2px solid rgba(255, 122, 24, 0.3);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 12px;
-  font-weight: 800;
-  color: #FF7A18;
-  margin: 0 auto 6px;
-}
-.medal span {
-  font-size: 9.5px;
-  color: #d3a68d;
-}
-
-.cta-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  width: 100%;
-  padding: 20px;
-  border-radius: 14px;
-  background: linear-gradient(135deg, #FF7A18 0%, #E63946 100%);
-  color: #ffffff;
-  font-size: 15px;
-  font-weight: 800;
-  text-decoration: none;
-  letter-spacing: 0.3px;
-  box-shadow: 0 12px 30px rgba(255, 122, 24, 0.3);
-  transition: transform 0.15s ease, filter 0.2s ease;
-  cursor: pointer;
-  margin-bottom: 6px;
-}
-.cta-btn:active { transform: scale(0.97); }
-.cta-btn:hover { filter: brightness(1.08); }
-
-.timer-text {
-  font-size: 12px;
-  color: #a97b64;
-  margin-bottom: 18px;
-}
-.timer-text span { color: #FF7A18; font-weight: 700; }
-
-/* Two-column feature grid */
-.feature-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 8px;
-  text-align: left;
-  margin-bottom: 4px;
-}
-.f-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 6px;
-  font-size: 11px;
-  color: #f0d9c8;
-  line-height: 1.4;
-}
-.f-item i { color: #FF7A18; font-size: 11px; margin-top: 2px; flex-shrink: 0; }
-
-.disclaimer {
-  margin-top: 16px;
-  font-size: 9.5px;
-  line-height: 1.6;
-  color: #6b453c;
-  text-align: center;
-  padding: 10px 6px 0;
-  border-top: 1px solid rgba(255,255,255,0.06);
-}
+/* Footer / Legal Tabs */
+.legal{ margin-top:30px; font-size:11px; color:#64748b; line-height:1.6; text-align:center; border-top:1px solid #1e293b; padding-top:20px; }
+.legal a{ color:#94a3b8; text-decoration:underline; }
+.tabs{ display:flex; justify-content:center; gap:15px; margin-bottom:12px; }
+.tab{ font-size:12px; color:#64748b; cursor:pointer; border:none; background:none; font-family:inherit; text-decoration:none; font-weight:600; }
+.tab.active{ color:#ffb703; border-bottom:2px solid #ffb703; padding-bottom:2px; }
+.info{ display:none; }
+.info.active{ display:block; }
 </style>
-
-</head>
-<body>
 
 <!-- Meta Pixel Code -->
 <script>
@@ -194,78 +76,92 @@ src="https://www.facebook.com/tr?id=1007665035448701&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Meta Pixel Code -->
 
-<div class="wrapper">
-  <div class="card">
+</head>
+<body>
 
-    <div class="kite-strip"><span></span><span></span><span></span><span></span><span></span></div>
+<div class="top-bar">
+🚀 <span>ગુજરાતના ટ્રેડર્સ માટે:</span> Daily Nifty & BankNifty Analysis
+</div>
 
-    <div class="body-pad">
-      <img src="gj.jpg" class="avatar" alt="Profile Image" width="84" height="84" decoding="async" fetchpriority="high">
+<div class="container">
 
-      <div class="badge"><i class="fas fa-shield-halved"></i> Verified Educational Community</div>
+  <div class="profile-card">
+    <div class="img-box">
+      <img src="GJ.jpg" alt="Pro Trading Expert">
+    </div>
+    <h1>GUJARATI TRADER</h1>
+    <p class="sub">Market Analyst & Educator</p>
+    <p class="desc">સ્ટોક માર્કેટ શીખો સરળ ગુજરાતી ભાષામાં. સ્ટોક માર્કેટના ડેઇલી અપડેટ્સ માટે જોડાઓ.</p>
+  </div>
 
-      <h1>GUJARATI TRADER</h1>
-      <p class="subtitle">શેર બજાર &amp; Financial Trading Education</p>
-
-      <div class="medal-row">
-        <div class="medal"><div class="circle">100%</div><span>શરૂઆત</span></div>
-        <div class="medal"><div class="circle">Daily</div><span>Updates</span></div>
-        <div class="medal"><div class="circle">Free</div><span>Access</span></div>
-      </div>
-
-      <a class="cta-btn" id="telegramBtn" href="https://t.me/+bAHJcbcXYskzNDY1" rel="noopener noreferrer">
-        <i class="fab fa-telegram-plane"></i> Join Free Telegram Community
-      </a>
-      <div class="timer-text">
-        ⏳ Auto-redirecting in <span id="count">8</span>s...
-      </div>
-
-      <div class="feature-grid">
-        <div class="f-item"><i class="fas fa-check-circle"></i> દરરોજ Market Updates</div>
-        <div class="f-item"><i class="fas fa-check-circle"></i> મફત Educational Content</div>
-        <div class="f-item"><i class="fas fa-check-circle"></i> સરળ સમજૂતી શરૂઆત માટે</div>
-        <div class="f-item"><i class="fas fa-check-circle"></i> સંપૂર્ણ Community Support</div>
-      </div>
-
-      <div class="disclaimer">
-        <strong>Disclaimer:</strong> આ platform ફક્ત educational અને informational હેતુઓ માટે છે. અમે કોઈ financial advice આપતા નથી અને નફાની કોઈ ગેરંટી નથી. Stock market investments carry risk — રોકાણ કરતા પહેલા તમારું પોતાનું research કરો.
-      </div>
-
-      <div style="text-align:center; margin-top: 14px;">
-        <a href="https://t.me/srsagency" target="_blank" rel="noopener noreferrer" style="display:inline-block; padding:6px 14px; border-radius:20px; background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.12); color:#8fa3b8; font-size:10px; font-weight:600; text-decoration:none; letter-spacing:0.3px;">
-          Ads By SRS ADS
-        </a>
-      </div>
+  <div class="stats">
+    <div class="box">
+      <h2>6+</h2>
+      <p>વર્ષનો અનુભવ</p>
+    </div>
+    <div class="box">
+      <h2>10K+</h2>
+      <p>સભ્યો</p>
+    </div>
+    <div class="box">
+      <h2>Daily</h2>
+      <p>લાઇવ અપડેટ્સ</p>
     </div>
   </div>
+
+  <a href="https://t.me/+IRyGDIWZGSdmZmY1" class="btn" id="ctaBtn">
+    🚀 JOIN FREE TELEGRAM (ફ્રી જુઓ)
+  </a>
+
+  <div class="points">
+    <div class="point">
+      <span class="icon">📊</span> 
+      <span><strong>ડેઇલી ઇન્ટ્રાડે એનાલિસિસ:</strong> Daily Intraday Levels</span>
+    </div>
+    <div class="point">
+      <span class="icon">📈</span> 
+      <span><strong>નિફ્ટી અને બેંકનિફ્ટી:</strong> Nifty & BankNifty Setup</span>
+    </div>
+    <div class="point">
+      <span class="icon">📚</span> 
+      <span><strong>ફ્રી લર્નિંગ કન્ટેન્ટ:</strong> Educational Trading Content</span>
+    </div>
+  </div>
+
+  <div class="legal">
+    <div class="tabs">
+      <button class="tab active" onclick="showTab('p', this)">Privacy Policy</button>
+      <button class="tab" onclick="showTab('d', this)">Disclaimer</button>
+      <button class="tab" onclick="showTab('t', this)">Terms</button>
+    </div>
+
+    <div class="info active" id="p">
+      અમે એનાલિટિક્સ માટે Meta Pixel નો ઉપયોગ કરીએ છીએ. અમે કોઈ અંગત નાણાકીય માહિતી એકત્રિત કરતા નથી.<br>
+      Ads by <a href="https://t.me/srsagency">SRS Ads</a>
+    </div>
+
+    <div class="info" id="d">
+      <strong>ડીસ્ક્લેમર:</strong> અમે SEBI રજિસ્ટર્ડ નથી. આ પેજ માત્ર શૈક્ષણિક હેતુ (Educational Purpose) માટે છે. ટ્રેડિંગ જોખમી છે, પોતાના જોખમે વેપાર કરો.
+    </div>
+
+    <div class="info" id="t">
+      ભાગ લેવા માટે ઉંમર ૧૮+ હોવી જરૂરી છે. તમામ કન્ટેન્ટ માત્ર લર્નિંગ હેતુ માટે છે.
+    </div>
+  </div>
+
 </div>
 
 <script>
-(function() {
-  const telegramLink = "https://t.me/+bAHJcbcXYskzNDY1";
-  let time = 8;
-  const counter = document.getElementById("count");
-  const telegramBtn = document.getElementById("telegramBtn");
+function showTab(id, btn) {
+  document.querySelectorAll('.info').forEach(el => el.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(el => el.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  btn.classList.add('active');
+}
 
-  telegramBtn.addEventListener("click", function(e) {
-    e.preventDefault();
-    if (window.fbq) {
-      fbq('track', 'Lead', { content_name: 'Telegram Community', button_click: true }, { eventID: 'telegram_Lead_' + Date.now() });
-    }
-    setTimeout(() => {
-      window.location.href = telegramLink;
-    }, 200);
-  });
-
-  const countdown = setInterval(() => {
-    time--;
-    counter.textContent = time;
-    if (time <= 0) {
-      clearInterval(countdown);
-      window.location.href = telegramLink;
-    }
-  }, 1000);
-})();
+document.getElementById('ctaBtn').addEventListener('click', function() {
+  fbq('track', 'Lead');
+});
 </script>
 
 </body>
